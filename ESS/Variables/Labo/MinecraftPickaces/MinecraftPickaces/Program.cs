@@ -74,7 +74,7 @@
                 Console.WriteLine($"The rest of the pickaxes would have the following durability left:");
 
 
-                Console.WriteLine($"Wood:\t\t{woodPick} \nIron:\t\t{ironPick}\nGold:\t\t{goldPick} \nDiamond:\t{diamondPick} \nNetherire:\t{netheritePick}");
+                Console.WriteLine($"Wood:\t\t{woodPick} \nIron:\t\t{ironPick}\nGold:\t\t{goldPick} \nDiamond:\t{diamondPick} \nNetherite:\t{netheritePick}");
 
                 //Player Pickaxe making
                 Console.WriteLine();
@@ -94,19 +94,21 @@
                     Console.WriteLine("And finaly, what is the name of this fine crafted pickaxe?");
                     Console.Write("Name: ");
                     plPickName = Console.ReadLine();
+
+                    Console.WriteLine($"Ah! What a fitting name! \nNow lets see what {plPickName} can do!");
+                    Console.WriteLine($"So, with {plPickName}, made of {plPickMaterial} and with a durability of {plPickDura}");
+                    plPickDura -= blocks;
+                    if (plPickDura < 0)
+                    {
+                        plPickDura = 0;
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine($"You still have {plPickDura} blocks left on your pickaxe!");
                 }
 
-               
 
-                Console.WriteLine($"Ah! What a fitting name! \nNow lets see what {plPickName} can do!");
-                Console.WriteLine($"So, with {plPickName}, made of {plPickMaterial} and with a durability of {plPickDura}");
-                plPickDura -= blocks;
-                if (plPickDura < 0)
-                {
-                    plPickDura = 0;
-                }
-                Console.WriteLine();
-                Console.WriteLine($"You still have {plPickDura} blocks left on your pickaxe!");
+
+
 
 
             }
